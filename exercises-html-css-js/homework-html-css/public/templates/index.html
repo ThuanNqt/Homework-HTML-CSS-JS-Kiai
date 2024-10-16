@@ -39,7 +39,7 @@
               <i class="fa-solid fa-bell"></i>
               <div class="badge">6</div>
             </div>
-            <div class="language">
+            <!-- <div class="language">
               <div class="language-logo">
                 <img src="./assets/images/Flag.png" alt="Flag logo" />
               </div>
@@ -47,9 +47,57 @@
                 <select name="language" id="language">
                   <option value="en" selected>English</option>
                   <option value="vn">Tiếng Việt</option>
+                  <option value="zh">中文</option>
+                  <option value="jp">日本語</option>
                 </select>
               </div>
+            </div> -->
+            <div class="language">
+              <div class="language-logo">
+                <img src="./assets/images/Flag.png" alt="Flag logo" />
+              </div>
+              <div class="language-drop">
+                <div class="selected-language">
+                  English
+                  <!-- Đây là ngôn ngữ đã chọn -->
+                </div>
+                <div class="language-options">
+                  <p class="language-opt-title">Select Language</p>
+                  <div class="language-option selected" data-value="en">
+                    <div class="language-option-img">
+                      <img src="./assets/images/Flag.png" alt="English" />
+                    </div>
+                    <div class="language-option-name">English</div>
+                    <span class="mark"><i class="las la-check"></i></span>
+                  </div>
+                  <div class="language-option" data-value="vn">
+                    <div class="language-option-img">
+                      <img src="./assets/images/FlagVN.png" alt="Tiếng Việt" />
+                    </div>
+                    <div class="language-option-name">Tiếng Việt</div>
+                    <span class="mark"><i class="las la-check"></i></span>
+                  </div>
+                  <div class="language-option" data-value="zh">
+                    <div class="language-option-img">
+                      <img src="./assets/images/FlagChina.png" alt="中文" />
+                    </div>
+                    <div class="language-option-name">中文</div>
+                    <span class="mark"><i class="las la-check"></i></span>
+                  </div>
+                  <div class="language-option" data-value="jp">
+                    <div class="language-option-img">
+                      <img src="./assets/images/FlagJapan.png" alt="日本語" />
+                    </div>
+                    <div class="language-option-name">日本語</div>
+                    <span class="mark"><i class="las la-check"></i></span>
+                  </div>
+                </div>
+              </div>
+              <div class="language-drop-icon">
+                <i class="las la-angle-down"></i>
+              </div>
             </div>
+
             <div class="info">
               <div class="info-logo">
                 <img src="./assets/images/man-438081_960_720.png" alt="" />
@@ -191,9 +239,118 @@
               <div class="product-item">
                 <div class="item-image">
                   <img
-                    src="./assets/images/apple-watch.png"
+                    src="./assets/images/apple-watch-1.jpg"
                     alt="apple watch"
                   />
+                  <button class="prev-img">
+                    <i class="las la-angle-left"></i>
+                  </button>
+                  <button class="next-img">
+                    <i class="las la-angle-right"></i>
+                  </button>
+                </div>
+
+                <div class="item-content">
+                  <div class="item-info">
+                    <p class="item-title">Apple Watch Series 4</p>
+                    <div class="item-price">$120.00</div>
+                    <div class="item-rating">
+                      <div class="rating-star">
+                        <svg
+                          width="16"
+                          height="15"
+                          viewBox="0 0 16 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M8 10.88L3.29772 14.4721L5.26096 8.88997L0.391548 5.52786L6.30718 5.67003L8 0L9.69282 5.67003L15.6085 5.52786L10.739 8.88997L12.7023 14.4721L8 10.88Z"
+                            fill="#FF9500"
+                          />
+                        </svg>
+                        <svg
+                          width="16"
+                          height="15"
+                          viewBox="0 0 16 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M8 10.88L3.29772 14.4721L5.26096 8.88997L0.391548 5.52786L6.30718 5.67003L8 0L9.69282 5.67003L15.6085 5.52786L10.739 8.88997L12.7023 14.4721L8 10.88Z"
+                            fill="#FF9500"
+                          />
+                        </svg>
+
+                        <svg
+                          width="16"
+                          height="15"
+                          viewBox="0 0 16 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M8 10.88L3.29772 14.4721L5.26096 8.88997L0.391548 5.52786L6.30718 5.67003L8 0L9.69282 5.67003L15.6085 5.52786L10.739 8.88997L12.7023 14.4721L8 10.88Z"
+                            fill="#FF9500"
+                          />
+                        </svg>
+
+                        <svg
+                          width="16"
+                          height="15"
+                          viewBox="0 0 16 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M8 10.88L3.29772 14.4721L5.26096 8.88997L0.391548 5.52786L6.30718 5.67003L8 0L9.69282 5.67003L15.6085 5.52786L10.739 8.88997L12.7023 14.4721L8 10.88Z"
+                            fill="#FF9500"
+                          />
+                        </svg>
+                        <svg
+                          width="16"
+                          height="15"
+                          viewBox="0 0 16 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity="0.2"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M8 10.88L3.29772 14.4721L5.26096 8.88997L0.391548 5.52786L6.30718 5.67003L8 0L9.69282 5.67003L15.6085 5.52786L10.739 8.88997L12.7023 14.4721L8 10.88Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </div>
+                      <p class="rating-count">(131)</p>
+                    </div>
+                    <button class="edit-item">Edit Product</button>
+                  </div>
+                  <div class="item-favorite">
+                    <i class="lar la-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="product-item">
+                <div class="item-image">
+                  <img
+                    src="./assets/images/apple-watch-1.jpg"
+                    alt="apple watch"
+                  />
+                  <button class="prev-img">
+                    <i class="las la-angle-left"></i>
+                  </button>
+                  <button class="next-img">
+                    <i class="las la-angle-right"></i>
+                  </button>
                 </div>
                 <div class="item-content">
                   <div class="item-info">
@@ -287,105 +444,15 @@
               <div class="product-item">
                 <div class="item-image">
                   <img
-                    src="./assets/images/apple-watch.png"
+                    src="./assets/images/apple-watch-1.jpg"
                     alt="apple watch"
                   />
-                </div>
-                <div class="item-content">
-                  <div class="item-info">
-                    <p class="item-title">Apple Watch Series 4</p>
-                    <div class="item-price">$120.00</div>
-                    <div class="item-rating">
-                      <div class="rating-star">
-                        <svg
-                          width="16"
-                          height="15"
-                          viewBox="0 0 16 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M8 10.88L3.29772 14.4721L5.26096 8.88997L0.391548 5.52786L6.30718 5.67003L8 0L9.69282 5.67003L15.6085 5.52786L10.739 8.88997L12.7023 14.4721L8 10.88Z"
-                            fill="#FF9500"
-                          />
-                        </svg>
-                        <svg
-                          width="16"
-                          height="15"
-                          viewBox="0 0 16 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M8 10.88L3.29772 14.4721L5.26096 8.88997L0.391548 5.52786L6.30718 5.67003L8 0L9.69282 5.67003L15.6085 5.52786L10.739 8.88997L12.7023 14.4721L8 10.88Z"
-                            fill="#FF9500"
-                          />
-                        </svg>
-
-                        <svg
-                          width="16"
-                          height="15"
-                          viewBox="0 0 16 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M8 10.88L3.29772 14.4721L5.26096 8.88997L0.391548 5.52786L6.30718 5.67003L8 0L9.69282 5.67003L15.6085 5.52786L10.739 8.88997L12.7023 14.4721L8 10.88Z"
-                            fill="#FF9500"
-                          />
-                        </svg>
-
-                        <svg
-                          width="16"
-                          height="15"
-                          viewBox="0 0 16 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M8 10.88L3.29772 14.4721L5.26096 8.88997L0.391548 5.52786L6.30718 5.67003L8 0L9.69282 5.67003L15.6085 5.52786L10.739 8.88997L12.7023 14.4721L8 10.88Z"
-                            fill="#FF9500"
-                          />
-                        </svg>
-                        <svg
-                          width="16"
-                          height="15"
-                          viewBox="0 0 16 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            opacity="0.2"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M8 10.88L3.29772 14.4721L5.26096 8.88997L0.391548 5.52786L6.30718 5.67003L8 0L9.69282 5.67003L15.6085 5.52786L10.739 8.88997L12.7023 14.4721L8 10.88Z"
-                            fill="black"
-                          />
-                        </svg>
-                      </div>
-                      <p class="rating-count">(131)</p>
-                    </div>
-                    <button class="edit-item">Edit Product</button>
-                  </div>
-                  <div class="item-favorite">
-                    <i class="lar la-heart"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="product-item">
-                <div class="item-image">
-                  <img
-                    src="./assets/images/apple-watch.png"
-                    alt="apple watch"
-                  />
+                  <button class="prev-img">
+                    <i class="las la-angle-left"></i>
+                  </button>
+                  <button class="next-img">
+                    <i class="las la-angle-right"></i>
+                  </button>
                 </div>
                 <div class="item-content">
                   <div class="item-info">

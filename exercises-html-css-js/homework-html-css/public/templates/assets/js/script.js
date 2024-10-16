@@ -25,8 +25,20 @@ if (navIcon) {
     aside.classList.toggle("hidden");
 
     if (aside.classList.contains("hidden")) {
-      navIcon.innerHTML = '<i class="las la-expand-arrows-alt"></i>'; // Thay icon mới
+      asideItems.forEach((item) => {
+        const pTag = item.querySelector("p");
+        if (pTag) {
+          pTag.style.display = "none";
+        }
+      });
+      navIcon.innerHTML = '<i class="las la-expand-arrows-alt"></i>';
     } else {
+      asideItems.forEach((item) => {
+        const pTag = item.querySelector("p");
+        if (pTag) {
+          pTag.style.display = "block";
+        }
+      });
       navIcon.innerHTML = '<i class="las la-bars"></i>';
     }
   });
@@ -35,20 +47,38 @@ if (navIcon) {
 /**
  * change language
  */
-const languageSelect = document.querySelector("#language");
+const selectedLanguage = document.querySelector(".selected-language");
+const languageDrop = document.querySelector(".language-drop");
+const languageOptions = document.querySelectorAll(".language-option");
 const languageLogo = document.querySelector(".language-logo img");
 
-if (languageSelect) {
-  languageSelect.addEventListener("change", () => {
-    const selectedLanguage = languageSelect.value;
-    // console.log(selectedLanguage);
-    if (selectedLanguage === "en") {
-      languageLogo.src = "./assets/images/Flag.png";
-    } else if (selectedLanguage === "vn") {
-      languageLogo.src = "./assets/images/FlagVN.png";
-    }
+selectedLanguage.addEventListener("click", () => {
+  languageDrop.classList.toggle("active");
+});
+
+languageOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    const value = option.getAttribute("data-value"); // vn en jp zh
+    const languageName = option.querySelector(
+      ".language-option-name"
+    ).textContent; // English, ...
+    const languageImageSrc = option
+      .querySelector(".language-option-img img")
+      .getAttribute("src"); // ./assets/images/FlagVN.png
+
+    // set selectedLanguage
+    languageLogo.src = languageImageSrc;
+    selectedLanguage.textContent = languageName;
+
+    // Xóa dấu tích khỏi tất cả các lựa chọn
+    languageOptions.forEach((opt) => opt.classList.remove("selected"));
+
+    // Thêm dấu tích vào lựa chọn hiện tại
+    option.classList.add("selected");
+
+    languageDrop.classList.remove("active");
   });
-}
+});
 
 /**
  * change image slider
@@ -60,6 +90,9 @@ const images = [
   "./assets/images/background4.jpg",
   "./assets/images/background6.jpg",
   "./assets/images/background7.jpg",
+  "./assets/images/background9.jpg",
+  "./assets/images/background13.jpg",
+  "./assets/images/background14.png",
 ];
 
 let idxImage = 0;
