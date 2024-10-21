@@ -245,6 +245,9 @@ body {
 
 .language-option:hover {
   background-color: #f1f1f1;
+}
+
+.language-option:last-child:hover {
   border-bottom-left-radius: 13px;
   border-bottom-right-radius: 13px;
 }
@@ -262,10 +265,13 @@ body {
 }
 
 .info {
+  --spacing: 20px;
   display: flex;
   align-items: center;
   column-gap: 16px;
   cursor: pointer;
+  position: relative;
+  z-index: 5;
 }
 
 .info-logo {
@@ -296,11 +302,80 @@ body {
 .info-dropdown {
   width: 18px;
   height: 18px;
+  display: block;
 }
 
 .info-dropdown i {
   font-size: 18px;
   background-color: #fff;
+}
+
+.dropdown-list {
+  position: absolute;
+  width: 200px;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  padding: 0;
+  box-shadow: 0px 9px 40px 0px #0000001b;
+  border-radius: 14px;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s linear;
+  /* margin-top: 20px; */
+  transform: translateY(var(--spacing));
+}
+
+.info:hover .dropdown-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Fix lỗi khi hover vào vùng khoảng trắng thừa trên */
+.dropdown-list::before {
+  content: "";
+  position: absolute;
+  /* background-color: red; */
+  height: var(--spacing);
+  top: 0;
+  right: 0;
+  left: 0;
+  /* margin-top: -20px; */
+  transform: translateY(-100%);
+}
+
+.dropdown-item {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 12px 0 12px 20px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 0.5px solid rgba(151, 151, 151, 0.26);
+}
+
+.dropdown-item p {
+  color: #404040;
+  font-size: 14px;
+  line-height: 1.36;
+}
+
+.dropdown-item:hover {
+  background-color: #f4f5f9;
+}
+
+.dropdown-item:first-child:hover {
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+
+.dropdown-item:last-child:hover {
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
 }
 
 .aside {
