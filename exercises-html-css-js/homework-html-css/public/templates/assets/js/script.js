@@ -19,12 +19,14 @@ if (asideItems) {
  */
 const navIcon = document.querySelector(".nav-icon");
 const aside = document.querySelector(".aside");
+const headerLogo = document.querySelector(".header-logo");
 
 if (navIcon) {
   navIcon.addEventListener("click", () => {
     aside.classList.toggle("hidden");
 
     if (aside.classList.contains("hidden")) {
+      headerLogo.classList.add("hidden");
       asideItems.forEach((item) => {
         const pTag = item.querySelector("p");
         if (pTag) {
@@ -33,6 +35,7 @@ if (navIcon) {
       });
       navIcon.innerHTML = '<i class="las la-expand-arrows-alt"></i>';
     } else {
+      headerLogo.classList.remove("hidden");
       asideItems.forEach((item) => {
         const pTag = item.querySelector("p");
         if (pTag) {

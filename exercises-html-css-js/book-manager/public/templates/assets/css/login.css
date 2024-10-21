@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+:root {
+  --icon-size: 14px;
+  --checkbox-size: 24px;
+  --fs: 18px;
+  --range: 16px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #4880ff;
+  overflow-x: hidden;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 90%;
+  height: auto;
+  margin: 200px 0;
+  max-width: 630px;
+  max-height: 735px;
+  padding: 20px;
+  border-radius: 24px;
+  opacity: 0px;
+  background-color: #fff;
+  border: 0.3px solid #b9b9b9;
+}
+
+.svg-1,
+.svg-2,
+.svg-3,
+.svg-4 {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+
+.svg-1 {
+  width: 895px;
+  height: 895px;
+  top: 485px;
+  left: -175px;
+  gap: 0px;
+  opacity: 0px;
+}
+.svg-2 {
+  width: 1042px;
+  height: 1042px;
+  top: -541.06px;
+  left: 1981.11px;
+  gap: 0px;
+  opacity: 0.54px;
+  transform: rotate(-100deg);
+}
+.svg-3 {
+  width: 895px;
+  height: 895px;
+  top: 454.02px;
+  left: 946.13px;
+  gap: 0px;
+  opacity: 0.6px;
+  transform: rotate(-160deg);
+}
+.svg-4 {
+  width: 1150px;
+  height: 1150px;
+  top: 1398.53px;
+  left: 774px;
+  gap: 0px;
+  opacity: 0px;
+  transform: rotate(80deg);
+}
+
+.detail {
+  margin: 90px 56px;
+}
+
+.title {
+  margin-top: 50px;
+  font-size: 32px;
+  line-height: 1.36;
+
+  color: #202224;
+  text-align: center;
+}
+
+.description {
+  font-size: var(--fs);
+  line-height: 1.36;
+  text-align: left;
+  text-align: center;
+  opacity: 80%;
+  margin-top: 28px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 37px;
+  row-gap: 16px;
+}
+
+.label {
+  font-size: var(--fs);
+  line-height: 1.36;
+  text-align: left;
+  opacity: 0.8;
+}
+
+.input {
+  width: 100%;
+  /* max-height: 56px; */
+  max-height: calc(var(--fs) * 3.1);
+  gap: 0px;
+  border-radius: 8px;
+  font-size: var(--fs);
+  line-height: 1.36;
+  text-align: left;
+  border: 1px solid #d8d8d8;
+  padding: var(--range);
+  background: #f1f4f9;
+}
+
+input::placeholder {
+  color: #a6a6a6;
+  font-size: var(--fs);
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  position: absolute;
+  left: var(--range);
+}
+
+.input-icon:nth-child(1) {
+  left: var(--range);
+}
+.input-icon:nth-child(2) {
+  left: calc(var(--range) * 2 + var(--icon-size));
+}
+.input-icon:nth-child(3) {
+  left: calc(var(--range) * 3 + var(--icon-size) * 2);
+}
+.input-icon:nth-child(4) {
+  left: calc(var(--range) * 4 + var(--icon-size) * 3);
+}
+.input-icon:nth-child(5) {
+  left: calc(var(--range) * 5 + var(--icon-size) * 4);
+}
+
+.input-icon:nth-child(6) {
+  left: calc(var(--range) * 6 + var(--icon-size) * 5);
+}
+
+.password {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.forgot-password {
+  text-decoration: none;
+  opacity: 0.6;
+  color: black;
+  font-size: var(--fs);
+  line-height: 1.36;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  display: none;
+}
+
+.label-checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  opacity: 0.6;
+  font-size: var(--fs);
+  line-height: 1.36;
+  color: #202224;
+}
+
+.label-checkbox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  border: 1px solid #656565;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.checkbox:checked + .label-checkbox svg {
+  display: block;
+}
+
+.label-checkbox svg {
+  display: none;
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.submit-btn {
+  margin: 50px auto 0;
+  background-color: #4880ff;
+  width: 80%;
+  max-width: 418px;
+  height: auto;
+  padding: 16px;
+  border-radius: 8px;
+  opacity: 0.9;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  color: #fff;
+  border: none;
+}
+
+.create-new {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.create-new p {
+  font-size: var(--fs);
+  line-height: 1.5;
+  opacity: 0.65;
+  color: #202224;
+  margin: 0;
+}
+
+.create-new p a {
+  color: #5a8cff;
+  font-size: var(--fs);
+  line-height: 1.5;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.create-new p a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 991.98px) {
+  .container {
+    width: 70%;
+    --fs: 16px;
+    --icon-size: 12px;
+    --checkbox-size: 20px;
+    --range: 14px;
+    margin: 160px auto;
+  }
+
+  .detail {
+    margin: 80px 46px;
+  }
+
+  .title {
+    margin-top: 40px;
+    font-size: 28px;
+  }
+
+  .description {
+    margin-top: 24px;
+  }
+
+  .form-group {
+    margin-top: 34px;
+    row-gap: 14px;
+  }
+
+  .submit-btn {
+    padding: 14px;
+    font-size: 18px;
+    padding: 14px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .container {
+    width: 55%;
+    --fs: 14px;
+    --icon-size: 10px;
+    --checkbox-size: 18px;
+    --range: 12px;
+    margin: 100px auto;
+  }
+
+  .detail {
+    margin: 50px 36px 20px;
+  }
+
+  .title {
+    margin-top: 34px;
+    font-size: 24px;
+  }
+
+  .description {
+    margin-top: 20px;
+  }
+
+  .form-group {
+    margin-top: 30px;
+    row-gap: 12px;
+  }
+
+  .submit-btn {
+    padding: 14px;
+    font-size: 18px;
+    padding: 10px;
+    margin: 40px auto 0;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .container {
+    width: 50%;
+    --fs: 12px;
+    --icon-size: 8px;
+    --checkbox-size: 14px;
+    --range: 12px;
+    margin: 60px 0px;
+  }
+
+  .detail {
+    margin: 30px 12px 10px;
+  }
+
+  .title {
+    margin-top: 28px;
+    font-size: 20px;
+  }
+
+  .description {
+    margin-top: 14px;
+  }
+
+  .form-group {
+    margin-top: 24px;
+    row-gap: 8px;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 14px;
+    padding: 6px;
+    margin: 30px auto 0;
+  }
+}
